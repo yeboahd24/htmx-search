@@ -1,0 +1,400 @@
+$midBlue: #3465a4;
+$lightBlue: #3d72d7;
+
+body {
+    overflow-x:hidden;
+    margin: 0px;
+    line-height: 1.4em;
+    font-size: 18px;
+    color: #333;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+      "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif !important;
+}
+
+table {
+    font-size: 18px;
+}
+
+.info-table table tbody tr td:first-of-type {
+    white-space: nowrap;
+}
+
+.full-width {
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    &:hover{
+        cursor: pointer;
+    }
+}
+
+.light {
+}
+
+.content{
+}
+
+.top-nav {
+    line-height: 30px;
+    border-bottom: 1px solid #d0d0d0;
+    margin: 0px;
+    background-image: linear-gradient(#fff, #f4f5f5);
+    box-shadow: 0px 4px 15px 0px rgb(239, 239, 239);
+    margin-bottom:1em;
+}
+
+.hide {
+    display:none;
+}
+
+.active a {
+    font-weight: bold;
+}
+
+code {
+    font-weight: bold;
+}
+
+.dark-hero {
+    background: url(/img/topo.svg), linear-gradient(#1f1f1f, #2d2d2d) ;
+    height: 240px;
+    line-height: 240px;
+    text-align: center;
+    vertical-align: center;
+    color: whitesmoke;
+    margin-top: -2em;
+    * {
+        opacity: 0;
+        transition: all 500ms ease-in;
+    }
+    sub {
+        display: inline-block;
+        position: relative;
+        top: 40px;
+    }
+    &.appear {
+        * {
+            opacity: 1;
+            top: 10px;
+        }
+    }
+    .logo {
+        font-size: 100px;
+    }
+    a {
+        color: $lightBlue;
+    }
+    box-shadow:
+            inset 0px 11px 8px -10px #262626,
+            inset 0px -11px 8px -10px #262626;
+    border-bottom: 1px solid whitesmoke;
+}
+
+p {
+    margin: 16px;
+}
+
+pre[class*="language-"] {
+    font-size: 16px;
+    margin-top: 24px !important;
+    margin-bottom: 24px !important;
+}
+
+@media(min-width:45rem) {
+    pre[class*="language-"] {
+        margin-left: 48px !important;
+        margin-right: 48px !important;
+    }
+}
+
+blockquote {
+    border-left: 4px solid whitesmoke;
+    margin-left: 32px;
+    margin-right: 32px;
+}
+
+table {
+    margin: 16px;
+    width: 90%;
+}
+
+.hero {
+    text-align: center;
+    font-size: 5em;
+    margin: 0;
+    line-height: 1em;
+}
+
+a {
+  text-decoration: none;
+  color: $midBlue
+}
+
+.center {
+    text-align: center;
+}
+
+.nav {
+    ul {
+        list-style: none;
+        padding-left: 12px;
+    }
+    margin-bottom: 1em;
+}
+
+.hamburger {
+    display: none;
+}
+
+h2:not(:first-child) {
+    margin-top: 42px;
+}
+h3 {
+    margin-top: 32px;
+}
+h4 {
+    margin-top: 16px;
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+@media(max-width:45rem) {
+    #nav {
+        height: 0px;
+        overflow: hidden;
+        text-align: center;
+        font-size: 22px;
+        &.show {
+            height: initial;
+            overflow: visible;
+        }
+    }
+    .hero {
+        font-size: 2.5em;
+    }
+    pre[class*="language-"]  {
+        // margin-left: calc(50% - 50vw) !important;
+        // margin-right: calc(50% - 50vw) !important;
+        overflow-x: scroll !important;
+        border-radius: 0 !important;
+    }
+    .info-table  {
+        margin-left: calc(50% - 50vw) !important;
+        margin-right: calc(50% - 50vw) !important;
+        overflow-x: scroll !important;
+    }
+    .no-mobile {
+        display: none !important;
+    }
+    .hamburger {
+        display: inline-block;
+        float: right;
+    }
+    .nav {
+        text-align: center;
+        font-size: 1.2em;
+        line-height: 1.3em;
+    }
+}
+
+@media(min-width:45em) {
+    .col {
+        display: table-cell;
+    }
+    .\31 {
+        width: 5%;
+    }
+    .\33 {
+        width: 22%;
+    }
+    .\34 {
+        width: 30%;
+    }
+    .\35 {
+        width: 40%;
+    }
+    .\32 {
+        width: 15%;
+    }
+    .content .row .nav,
+    .logo-wrapper{
+        width:12rem;
+    }
+    .row {
+        display: table;
+        table-layout: fixed;
+        // border-spacing: 1em 0;
+    }
+}
+
+.w-100,
+.row {
+    width: 100%;
+}
+
+.card:focus {
+    outline: 0;
+    border: solid $midBlue;
+}
+
+hr {
+    outline: 0;
+}
+
+.card {
+    padding: 1em;
+    border: solid #eee;
+}
+
+a[href]:hover, .btn:hover {
+    opacity: .6;
+}
+
+.c {
+    width: calc(100% - 2em);
+    max-width: 55em;
+    margin: auto;
+}
+
+.btn.primary {
+    color: white;
+    background: $midBlue;
+    border: solid $midBlue;
+}
+
+td {
+    padding: 1em;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+th {
+    padding: 1em;
+    text-align: left;
+    border-bottom: 2px solid #eee;
+}
+
+.btn {
+    padding: 1em;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    background: white;
+    border: solid;
+    cursor:pointer;
+    border-radius: 8px;
+}
+
+pre {
+    overflow: auto;
+}
+
+table.delete-row-example .kutty-swapping {
+  opacity: 0;
+  transition: visibility 0s 1s, opacity 1s linear;
+}
+
+// MENU
+
+.menu{
+    padding:1em 0;
+}
+
+.github-stars iframe{
+    max-width:95px
+}
+
+// Content
+
+.content {
+    padding-top:1em;
+}
+
+h1,h2,h3,h4{
+    margin-bottom: .65em;
+}
+
+// UL in content
+:not(.nav) ul{
+    padding-left: 2em;
+}
+
+.nav ul{
+    padding-left: 0;
+    li ul {
+        padding-left:12px;
+    }
+}
+
+
+@media(min-width:45em) {
+
+    // Menu
+    .menu,
+    .navigation > div{
+        display:flex;
+        align-items:center;
+    }
+    .navigation{
+       flex:1;
+       display:flex;
+       justify-content: space-between;
+       padding-left: calc(1em + 1.5vw);
+    }
+    .navigation-items > *:not(:last-child){
+        margin-right: calc(.5em + .7vw);
+    }
+    .github-stars{
+        display:flex;
+        align-items:center;
+        a{
+            margin:0 calc(.5em + .7vw);
+        }
+
+    }
+
+    // Content
+    .content .col:not(.nav) {
+        padding-left: calc(1em + 1.5vw);
+    }
+    .content .nav > p,
+    .content .nav #contents{
+        position: sticky;
+
+    }
+
+    .content .nav #contents{
+        top: 3.5em;
+    }
+    .content .nav #contents > ul {
+        max-height: calc(100vh - 5rem);
+        overflow-y: scroll;
+    }
+
+    .content .nav > p
+    {
+        position: sticky;
+        top: 2vh;
+    }
+
+}
+
+@media(max-width:45rem) {
+    .github-stars{
+        text-align:center;
+        margin-top:1em;
+        a{
+            display:block;
+        }
+    }
+}
+
+
