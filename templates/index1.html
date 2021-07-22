@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <script src="https://unpkg.com/htmx.org@1.5.0"></script>
+    <title>Page 1</title>
+</head>
+
+<body>
+    <div>Page one body</div>
+    <div hx-boost="true">
+        <a href="{% url 'index_2' %}">Go To Page 2</a>
+    </div>
+</body>
+
+</html>

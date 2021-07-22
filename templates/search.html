@@ -21,7 +21,7 @@
         </h3><br>
         <form action="">
             <div class="col-xs-4">
-                <input class="form-control" type="text" name="search" placeholder="Begin Typing To Search Users..." hx-get="{% url 'search' %}" hx-trigger="keyup changed delay:500ms" hx-target="#search-results" hx-indicator=".htmx-indicator">
+                <input class="form-control" type="text" name="search" placeholder="Begin Typing To Search Users..." hx-get="{% url 'search' %}" hx-trigger="keyup changed delay:500ms" hx-target="body" hx-indicator=".htmx-indicator" hx-swap="innerHTML">
             </div>
             <br>
         </form>

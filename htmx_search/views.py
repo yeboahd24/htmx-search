@@ -20,3 +20,9 @@ def search(request):
 
 
 
+def index_1(request):
+	return render(request, 'index1.html')
+
+
+def index_2(request):
+	return render(request, 'index2.html')
