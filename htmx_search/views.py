@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.db.models import Q
-from django.views.generic.list import ListView
+from django.http import HttpResponse
 
 from .models import Clients
 
@@ -26,3 +26,14 @@ def index_1(request):
 
 def index_2(request):
 	return render(request, 'index2.html')
+
+
+def post(request):
+	client = Clients()
+	if request.method == "POST":
+		client.first_name = request.POST.get('first_name', '')
+		client.last_name = request.POST.get('last_name', '')
+		client.email = request.POST.get('email', '')
+		client.save()
+
+	return render(request, 'post.html')
